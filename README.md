@@ -1,18 +1,18 @@
 # frc-mcp-server
 
-A customizable MCP (Model Context Protocol) server for FRC (FIRST Robotics Competition). It provides AI agents with searchable access to your team's robot code, WPILib documentation, and vendor library context — making it easier to get accurate, team-specific answers about your robot.
+A customizable MCP (Model Context Protocol) server for FRC (FIRST Robotics Competition). It provides AI agents with searchable access to your team's robot code, WPILib documentation, and vendor library context, making it easier to get accurate, team-specific answers about your robot.
 
 Built on the [Model Context Protocol](https://modelcontextprotocol.io/) and deployed via [Vercel](https://vercel.com/) for zero-infrastructure setup.
 
 ## Features
 
 - **Three MCP tools** for browsing, searching, and reading FRC context:
-  - `list_frc_sources` — Discover all indexed files grouped by directory
-  - `search_frc_context` — Full-text search across documents and code (case-insensitive, scored by relevance)
-  - `get_frc_file` — Read a specific file by path, with optional line-range selection
-- **Customizable data** — Drop your robot code, WPILib docs, and vendor notes into `src/data/` and they become immediately available
-- **Vercel deployment** — One-click deploy; no server management needed
-- **CI included** — Automated type-checking and build on push via GitHub Actions
+  - `list_frc_sources`: Discover all indexed files grouped by directory
+  - `search_frc_context`: Full-text search across documents and code (case-insensitive, scored by relevance)
+  - `get_frc_file`: Read a specific file by path, with optional line-range selection
+- **Customizable data**: Drop your robot code, WPILib docs, and vendor notes into `src/data/` and they become immediately available
+- **Vercel deployment**: One-click deploy; no server management needed
+- **CI included**: Automated type-checking and build on push via GitHub Actions
 
 ## Quick Start
 
@@ -40,7 +40,7 @@ The server exposes a Streamable HTTP MCP endpoint. By default, Vercel routes the
 
 1. Fork or clone this repo
 2. Push to your own GitHub account
-3. Import the project in [Vercel](https://vercel.com/new) — it will auto-detect the configuration from `vercel.json`
+3. Import the project in [Vercel](https://vercel.com/new). It will auto-detect the configuration from `vercel.json`
 4. Your MCP server will be live at `https://<your-deployment>.vercel.app/mcp`
 
 ## Adding Your FRC Context
@@ -65,7 +65,7 @@ Supported file types: `.md`, `.txt`, `.json`, `.java`, `.kt`, `.cpp`, `.cc`, `.c
 
 ### Tips
 
-- Keep files focused and high-signal — smaller, curated docs produce better agent answers
+- Keep files focused and high-signal. Smaller, curated docs produce better agent answers
 - Add a `README.md` in each subfolder describing what's inside
 - Refresh data each season and remove stale docs
 - See [docs/FRC_CONTEXT.md](docs/FRC_CONTEXT.md) for the full guide on organizing your context data

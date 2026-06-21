@@ -363,7 +363,7 @@
   <h1>FRC MCP Server</h1>
   <p class="subtitle">
     Give your AI coding agent full access to FRC robot code, WPILib docs, and
-    vendor library context — right inside VS Code.
+    vendor library context, right inside VS Code.
   </p>
   <div class="endpoint-pill">
     <span class="label">MCP Endpoint →</span>
@@ -381,7 +381,7 @@
     <h2>What is this MCP server?</h2>
     <p>
       This is a <strong>Model Context Protocol (MCP)</strong> server.
-      It lets AI assistants — like GitHub Copilot, Claude, or Cursor — read and search
+      It lets AI assistants (like GitHub Copilot, Claude, or Cursor) read and search
       your team's robot source code and FRC/WPILib documentation directly, without you having
       to paste snippets manually.
     </p>
@@ -394,7 +394,7 @@
       <div class="card">
         <div class="icon">🤖</div>
         <h3>Robot Code Context</h3>
-        <p>Indexed Java source files — subsystems, commands, constants, and more.</p>
+        <p>Indexed Java source files: subsystems, commands, constants, and more.</p>
       </div>
       <div class="card">
         <div class="icon">📚</div>
@@ -520,7 +520,7 @@
 
     <h3>💡 Code question prompts</h3>
     <p>Ask about specific classes, constants, or subsystems:</p>
-    <div class="prompt-block">"Using the team's robot code context, explain how the shooter subsystem is tuned — what are the PID constants and feed-forward values?"</div>
+    <div class="prompt-block">"Using the team's robot code context, explain how the shooter subsystem is tuned: what are the PID constants and feed-forward values?"</div>
     <div class="prompt-block">"Find all usages of AutoBuilder in the robot code and explain how autonomous routines are structured."</div>
     <div class="prompt-block">"What swerve drive library does this robot use? Show me the relevant configuration constants."</div>
 
@@ -557,7 +557,7 @@
         <p>
           Think of it like a plugin system for AI agents. Instead of you copy-pasting code
           snippets into chat, an MCP server exposes <em>tools</em> the AI can call
-          programmatically — searching files, reading documentation, querying databases, and more.
+          programmatically: searching files, reading documentation, querying databases, and more.
         </p>
         <p>
           MCP is now supported by VS Code (Copilot), Claude Desktop, Cursor, Windsurf, and other
@@ -572,7 +572,7 @@
       <div class="faq-body">
         <p>
           Pasting code manually is slow, error-prone, and limited by chat window size.
-          An MCP server lets the agent <em>search on demand</em> — it only fetches the
+          An MCP server lets the agent <em>search on demand</em>: it only fetches the
           snippets relevant to your question, so responses stay focused and accurate.
         </p>
         <p>
@@ -597,14 +597,14 @@
     </details>
 
     <details>
-      <summary>The agent isn't calling MCP tools — what's wrong?</summary>
+      <summary>The agent isn't calling MCP tools: what's wrong?</summary>
       <div class="faq-body">
         <p>Common fixes:</p>
         <ul style="padding-left:1.2rem; line-height:2;">
           <li>Make sure you're in <strong>Agent mode</strong> (not Ask or Edit) in Copilot Chat.</li>
           <li>Check that <code>.vscode/mcp.json</code> is saved and the URL is correct.</li>
           <li>Reload VS Code after changing the MCP config (<kbd>Ctrl+Shift+P</kbd> → <em>Reload Window</em>).</li>
-          <li>Look for the <em>Tools</em> icon in the chat toolbar — the server should appear there.</li>
+          <li>Look for the <em>Tools</em> icon in the chat toolbar: the server should appear there.</li>
           <li>Try explicitly asking: <em>"Use the frc-mcp-server MCP tools to list sources."</em></li>
         </ul>
       </div>
